@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Mirrored from uberviz.io/viz/pareidolia/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 06:19:10 GMT -->
+<head>
+	<title>Pareidolia</title>
+	<meta charset="utf-8">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=0"/>
+</head>	
+
+<body>
+	<div id="tag">
+		<h2 class="clickable" id="tagButton">Pareidolia +</h2> 
+		<div id="info">
+			<p>A WebGL Audio Visualizer.</p> 
+			<p>Click for effects.</p> 
+			<p>Built by <a href="http://airtight.cc/">Airtight</a> with <a href="#">Three.js</a>.</p>
+			<p id="fps"></p>
+			<p id="gui"></p>
+		</div>
+	</div>
+	<div id="prompt"><h1>Drop MP3</h1></div>	
+	<div id="intro">
+		<h1>Pareidolia</h1> 
+		<h2>A WebGL Audio Visualizer.</h2> 
+		<p>Choose your audio source:</p>
+		<ul>
+			<li>
+				<div class="option clickable" id="option-mic">
+					<h2 class="underline">Use Microphone</h2>
+					<p>via getUserMedia<br>&nbsp;</p>
+					<!-- <p>Enable Web Audio Input in <em>chrome://flags</em></p> -->
+				</div>
+			</li>
+			<li>
+				<div class="option">
+					<h2>Load MP3</h2>
+					<p>Drag and Drop<br>MP3 file here.</p>
+				</div>
+			</li>
+			<li>
+				<div class="option clickable" id="option-sample">
+					<h2 class="underline">Play Sample Audio</h2>
+					<p>“Szerencsétlen”<br>by Venetian Snares</p>
+				</div>
+			</li>
+		</ul>
+
+
+		<p>Built by <a href="../../index.html">UberViz</a> with <a href="http://threejs.org/">Three.js</a>.</p>
+		<p>Buy <a href="https://itunes.apple.com/us/album/rossz-csillag-alatt-szuletett/id687479829">“Szerencsétlen” by Venetian Snares</a></p>
+
+	</div>
+
+	<script src="js/Detector.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src='js/libs/dat.gui.min.js'></script>
+	<script src="js/libs/stats.min.js"></script>
+	<script src="js/libs/minivents.min.js"></script>
+	<script src="js/postprocessing/EffectComposer.js"></script>
+	<script src="js/postprocessing/RenderPass.js"></script>
+	<script src="js/postprocessing/ShaderPass.js"></script>
+	<script src="js/postprocessing/MaskPass.js"></script> 
+	<script src="js/postprocessing/DotScreenPass.js"></script> 
+	<script src="js/shaders/CopyShader.js"></script>
+	<script src="js/shaders/DotScreenShader.js"></script>
+	<script src="js/shaders/ConvolutionShader.js"></script>
+	<script src="js/shaders/HorizontalBlurShader.js"></script>
+	<script src="js/shaders/ColorifyShader.js"></script>
+	<script src="js/shaders/MirrorShader.js"></script>
+	<script src="js/shaders/RGBShiftShader.js"></script>
+	<script src="js/shaders/DigitalGlitch.js"></script>
+	<script src="js/shaders/GlitchPass.js"></script>
+	<script src='js/libs/WebMIDIAPI.js'></script>
+	<script src="js/Box.js"></script>
+	<script src="js/audioHandler.js"></script>
+	<script src="js/MidiHandler.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+<!-- Mirrored from uberviz.io/viz/pareidolia/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 06:19:29 GMT -->
+</html>

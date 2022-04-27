@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from uberviz.io/viz/word-problems/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 06:18:43 GMT -->
+<head>
+    <title>ÜberViz</title>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div id="viz"></div>
+    <div id="controls">
+      <div id="debugText">ÜberViz v0.1.0</div>
+      <!-- <canvas id="audioDebug" width="250" height="200"></canvas> -->
+      <div id="settings"></div>
+    </div>
+
+    <div id="info">
+      Drop MP3 file to play it. Hit 'Q' to toggle controls.
+      <a href="https://itunes.apple.com/us/album/when-machines-exceed-human/id301909417"
+        >Buy 'Word Problems' by Harmonic 313</a
+      >.
+    </div>
+
+    <div id="intro">
+      <h1>WORD PROBLEMS</h1>
+      <h2>by Harmonic 313</h2>
+      <div id="play-btn"></div>
+      <div id="warning"></div>
+      <h3>Music Visualizer by <a href="../../index.html">UberViz</a>.</h3>
+      <p><a href="https://itunes.apple.com/us/album/when-machines-exceed-human/id301909417">Buy Song on iTunes</a>.</p>
+    </div>
+
+    <script src="../../../cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="lib/minivents.min.js"></script>
+    <script src="lib/Detector.js"></script>
+    <script src="lib/stats.min.js"></script>
+    <script src="lib/dat.gui.min.js"></script>
+    <script src="lib/SimplexNoise.js"></script>
+    <script src="lib/atutil.js"></script>
+    <script src="lib/shaders/AdditiveBlendShader.js"></script>
+    <script src="lib/shaders/BadTVShader.js"></script>
+    <script src="lib/postprocessing/EffectComposer.js"></script>
+    <script src="lib/postprocessing/RenderPass.js"></script>
+    <script src="lib/postprocessing/ShaderPass.js"></script>
+    <script src="lib/postprocessing/MaskPass.js"></script>
+    <script src="lib/postprocessing/BloomPass.js"></script>
+    <script src="lib/shaders/CopyShader.js"></script>
+    <script src="lib/shaders/ConvolutionShader.js"></script>
+    <script src="lib/shaders/HorizontalBlurShader.js"></script>
+    <script src="lib/shaders/VerticalBlurShader.js"></script>
+    <script src="lib/shaders/MirrorShader.js"></script>
+    <script src="lib/shaders/RGBShiftShader.js"></script>
+    <script src="lib/shaders/FilmShader.js"></script>
+
+    <script src="js/Main.js"></script>
+    <script src="js/AudioHandler.js"></script>
+    <script src="js/ControlsHandler.js"></script>
+    <script src="js/FXHandler.js"></script>
+    <script src="js/VizHandler.js"></script>
+
+    <script src="js/viz/Bars.js"></script>
+    <script src="js/viz/WhiteRing.js"></script>
+  </body>
+
+<!-- Mirrored from uberviz.io/viz/word-problems/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 06:19:04 GMT -->
+</html>
