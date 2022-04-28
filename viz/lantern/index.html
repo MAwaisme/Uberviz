@@ -1,32 +1,32 @@
 <!DOCTYPE HTML>
 <html lang="en">
 
-<!-- Mirrored from uberviz.io/viz/lantern/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 06:17:41 GMT -->
 <head>
 	<title>ÜberViz</title>
 	<meta charset="utf-8">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=0" />
 </head>
 
 <body>
 
-	<img id="loading-image" src="res/img/intro/loader.gif" alt="Loading..." style="display:none;"/>
-	
+	<img id="loading-image" src="res/img/intro/loader.gif" alt="Loading..." style="display:none;" />
+
 	<div id="viz">
-		
+
 		<div id="webgl"></div>
-		
+
 		<div id="intro">
 			<h1>
 				<img src="res/img/intro/logo-400.png" alt="ÜberViz" />
 			</h1>
-			<h2>Realtime Music Visualizer</h2> 
+			<h2>Realtime Music Visualizer</h2>
 			<div id="prompt">Drop MP3 here</div>
 			<div id='sound-options'>
-				<h3 >Choose music source:</h3>
+				<h3>Choose music source:</h3>
 				<div class="option clickable lefty" id="option-mic">
 					<h3 class="underline">Use Microphone</h3>
 					<div class="icon mic"></div>
@@ -47,25 +47,33 @@
 		<div id="info">
 
 			<div id="info-inner">
-				
+
 				<h2>ÜBERVIZ LIVE DEMO</h2>
-				
-				<p>Überviz is a generative realtime Music Visualizer. Multiple layered audio-reactive visuals automatically sync to incoming audio from the microphone or MP3. Visuals and Post-Processing FX are selected to create a non-repeating progression over time. Audio Reactivity is achieved by processing a combination of audio inputs: Volume, Frequency Levels, Audio Waveform, Beat Detection and BPM.</p>
+
+				<p>Überviz is a generative realtime Music Visualizer. Multiple layered audio-reactive visuals
+					automatically sync to incoming audio from the microphone or MP3. Visuals and Post-Processing FX are
+					selected to create a non-repeating progression over time. Audio Reactivity is achieved by processing
+					a combination of audio inputs: Volume, Frequency Levels, Audio Waveform, Beat Detection and BPM.</p>
 
 				<h3>Automatic Mode</h3>
-				<p>By default Überviz automatically works with the incoming audio. Viz and FXs switch out based on beat detection.</p>
+				<p>By default Überviz automatically works with the incoming audio. Viz and FXs switch out based on beat
+					detection.</p>
 
 				<h3>Manual Mode</h3>
-				<p>Hit 'Q' to toggle Control Panel. Uncheck 'AUTOMATIC' for manual control. Use 'AUDIO' 'Gain' to adjust for source volume. Tap 'W' to set BPM. Use 'VIZ' sliders to adjust audio-reactive Viz parameters. Use 'FX' sliders to adjust post-processing effects. </p>
-				
+				<p>Hit 'Q' to toggle Control Panel. Uncheck 'AUTOMATIC' for manual control. Use 'AUDIO' 'Gain' to adjust
+					for source volume. Tap 'W' to set BPM. Use 'VIZ' sliders to adjust audio-reactive Viz parameters.
+					Use 'FX' sliders to adjust post-processing effects. </p>
+
 				<h3>CREDITS</h3>
 
 				<ul>
-					<li>Sample Music is <a href="https://itunes.apple.com/us/album/wonder-where-we-land/id912126933">"Lantern" by Sbtrkt</a>.</li>
+					<li>Sample Music is <a
+							href="https://itunes.apple.com/us/album/wonder-where-we-land/id912126933">"Lantern" by
+							Sbtrkt</a>.</li>
 
-				<li>Built with Three.js, GSAP, WebGL and Web Audio API.</li>
+					<li>Built with Three.js, GSAP, WebGL and Web Audio API.</li>
 
-				<li>Built by <a href="../../index.html">UberViz</a>.</li>
+					<li>Built by <a href="http://www.uberviz.io">UberViz</a>.</li>
 				</ul>
 
 			</div>
@@ -74,7 +82,7 @@
 
 		<div class="info-btn btn"></div>
 		<div class="close-btn btn"></div>
-				
+
 	</div>
 
 	<div id="controls-holder">
@@ -91,13 +99,13 @@
 
 	<div id="preloader"></div>
 
-	<script src="../../../cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-	<script src="../../../cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
 	<script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/lib.min.js"></script>
 	<script src="js/main.min.js"></script>
 
 </body>
 
-<!-- Mirrored from uberviz.io/viz/lantern/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 06:17:51 GMT -->
 </html>

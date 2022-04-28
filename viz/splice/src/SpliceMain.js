@@ -16,7 +16,7 @@ var events = new Events();
 var snoise = new SimplexNoise();
 
 //MAIN RMP
-var SpliceMain = function() {
+var SpliceMain = function () {
 
 	var isMobile = false;
 
@@ -33,7 +33,7 @@ var SpliceMain = function() {
 	function init() {
 
 		//true for android or ios, false for MS surface
-		isMobile = !!('ontouchstart' in window); 
+		isMobile = !!('ontouchstart' in window);
 
 		// stats = new Stats();
 		// stats.domElement.style.position = 'absolute';
@@ -41,7 +41,7 @@ var SpliceMain = function() {
 		// stats.domElement.style.right = '0px';		
 		// $("body").append( stats.domElement );
 
-		$("#info-btn").click(function(){
+		$("#info-btn").click(function () {
 
 			panelShowing = !panelShowing;
 
@@ -52,7 +52,7 @@ var SpliceMain = function() {
 		});
 
 		init3D();
-		
+
 		AudioHandler.init(trackname);
 		FXHandler.init();
 		SequenceHandler.init();
@@ -60,17 +60,17 @@ var SpliceMain = function() {
 
 		Stars.init();
 		SkyBox.init();
-		
+
 
 		//LOAD SEQENCE
 		$.ajax({
 			type: "GET",
 			dataType: "json",
-			url: "res/"+ trackname + "/seq.json", 
+			url: "res/" + trackname + "/seq.json",
 			success: SpliceViz.onSequenceLoaded,
 		});
 
-		$("#play-btn").click(function(){
+		$("#play-btn").click(function () {
 			AudioHandler.play();
 		});
 
@@ -81,19 +81,19 @@ var SpliceMain = function() {
 		update();
 
 		//on android setup first touch to request fullscreen		
-		if (isMobile){
-			$('body').click(function(){
+		if (isMobile) {
+			$('body').click(function () {
 				$('body')[0].webkitRequestFullscreen();
 			});
 		}
 
 	}
 
-	function onPlay(){
-		TweenLite.to($("#play-btn"),0.3,{autoAlpha:0});
+	function onPlay() {
+		TweenLite.to($("#play-btn"), 0.3, { autoAlpha: 0 });
 	}
 
-	function init3D(){
+	function init3D() {
 
 		//RENDERER
 		renderer = new THREE.WebGLRenderer({
@@ -101,17 +101,17 @@ var SpliceMain = function() {
 			//precision: "lowp"
 		});
 		renderer.setSize(window.innerWidth, window.innerHeight);
-		renderer.setClearColor ( 0x000000);
+		renderer.setClearColor(0x000000);
 		renderer.sortObjects = false;
 		$("body").append(renderer.domElement);
 
 		//INIT 3D SCENE
-		camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+		camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
 		scene = new THREE.Scene();
 		scene.add(camera);
-		scene.fog = new THREE.Fog( 0x000000, 0, 1200);
-		vizHolder =  new THREE.Object3D();
-		scene.add( vizHolder );
+		scene.fog = new THREE.Fog(0x000000, 0, 1200);
+		vizHolder = new THREE.Object3D();
+		scene.add(vizHolder);
 
 	}
 
@@ -121,12 +121,12 @@ var SpliceMain = function() {
 		requestAnimationFrame(update);
 	}
 
-	function trace(text){
+	function trace(text) {
 		$("#debug-text").html(text);
 	}
 
-	function onResize(){
-		var w = window.innerWidth; 
+	function onResize() {
+		var w = window.innerWidth;
 		var h = window.innerHeight;
 
 		camera.aspect = w / h;
@@ -137,19 +137,19 @@ var SpliceMain = function() {
 	}
 
 	return {
-		init:init,
+		init: init,
 		trace: trace,
-		getVizHolder:function(){return vizHolder;},
-		getCamera:function(){return camera;},
-		getScene:function(){return scene;},
-		getRenderer:function(){return renderer;},
-		getIsMobile:function(){return isMobile;},
-		onPlay:onPlay
-		
+		getVizHolder: function () { return vizHolder; },
+		getCamera: function () { return camera; },
+		getScene: function () { return scene; },
+		getRenderer: function () { return renderer; },
+		getIsMobile: function () { return isMobile; },
+		onPlay: onPlay
+
 	};
 
 }();
 
-$(document).ready(function() {
+$(document).ready(function () {
 	SpliceMain.init();
 });
