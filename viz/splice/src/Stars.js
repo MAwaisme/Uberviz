@@ -1,6 +1,6 @@
-var starTexture = THREE.ImageUtils.loadTexture("res/img/dot.png");
+var starTexture = THREE.ImageUtils.loadTexture("../res/img/dot.png");
 
-var Stars = function() {
+var Stars = function () {
 
 
 	var starCount = 1800;
@@ -9,7 +9,7 @@ var Stars = function() {
 	var group;
 	var particles;
 
-	function init(){
+	function init() {
 
 		//init event listeners
 		events.on("update", update);
@@ -39,12 +39,12 @@ var Stars = function() {
 		material.color.setHSL(material.particleHue, 1.0, 1.0);
 
 		//create particles
-		var spread =  600;
+		var spread = 600;
 		for (i = 0; i < starCount; i++) {
 
-			var posn = new THREE.Vector3(ATUtil.randomRange(-spread,spread),
-											ATUtil.randomRange(-spread,spread),
-											ATUtil.randomRange(0,1000));
+			var posn = new THREE.Vector3(ATUtil.randomRange(-spread, spread),
+				ATUtil.randomRange(-spread, spread),
+				ATUtil.randomRange(0, 1000));
 
 			starGeometry.vertices.push(posn);
 			posn.origZ = posn.z;
@@ -64,17 +64,17 @@ var Stars = function() {
 	function update() {
 
 		//if stars go behind camera re-add to front
-		var camz =  SpliceMain.getCamera().position.z;
+		var camz = SpliceMain.getCamera().position.z;
 
 		for (i = 0; i < starCount; i++) {
 
 
 			starGeometry.vertices[i].z -= 1;
 
-			if (starGeometry.vertices[i].z < camz){
-				starGeometry.vertices[i].z = camz  +  Math.random()*600 + 200 ;
+			if (starGeometry.vertices[i].z < camz) {
+				starGeometry.vertices[i].z = camz + Math.random() * 600 + 200;
 			}
-			
+
 		}
 		starGeometry.verticesNeedUpdate = true;
 	}
@@ -82,17 +82,17 @@ var Stars = function() {
 	function seeked() {
 
 		//reset all stars infront of cam
-		var camz =  SpliceMain.getCamera().position.z;
+		var camz = SpliceMain.getCamera().position.z;
 
 		for (i = 0; i < starCount; i++) {
-			starGeometry.vertices[i].z = camz  +  Math.random()*600 + 200 ;
+			starGeometry.vertices[i].z = camz + Math.random() * 600 + 200;
 		}
 
 		starGeometry.verticesNeedUpdate = true;
 	}
 
 	return {
-		init:init,
+		init: init,
 	};
 
 }();
